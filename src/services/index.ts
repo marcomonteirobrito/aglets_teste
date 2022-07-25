@@ -1,9 +1,5 @@
-import axios from 'axios';
+import axios from "axios";
 
-const baseURL = "http://aglets.com.br/prova/prova.json"
-
-const api = axios.create({
-  baseURL 
-})
+const api = axios.create();
 
 export default api;

@@ -1,12 +1,34 @@
 import React from "react";
 
-const Invoice = () => {
+const Invoice = ({ invoices }: any) => {
+  console.log("invoices", invoices);
 
-  return(
+  return (
     <div>
-      <p>Nota Fiscal</p>
+      <div> Detalhes da Nota</div>
+
+      {invoices.map((invoice: any) => (
+        <>
+          <div>
+            <span>Numero da Nota</span>
+            <p>{invoice?.invoiceNumber}</p>
+          </div>
+
+          <div>
+            <div>
+              <span>Valor da NF</span>
+              <p>{invoice?.invoiceValue}</p>
+            </div>
+
+            <div>
+              <span>Data e Hora</span>
+              <p>{invoice?.issuanceDate}</p>
+            </div>
+          </div>
+        </>
+      ))}
     </div>
-  )
-}
+  );
+};
 
 export default Invoice;

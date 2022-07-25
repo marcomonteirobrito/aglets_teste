@@ -1,22 +1,12 @@
-import './App.css';
-import api from './services';
-
-// Components
-import OrderDetails from "./components/OrderDetails"
-import Invoice from "./components/Invoice"
-import List from './components/List';
-import Itens from './components/Items';
+import RoutesApplication from "./routes";
+import OrderProvider from "./context/OrderContext";
+import "./styles/global.scss";
 
 function App() {
- 
-
- return (
-    <div className="App">
-      <OrderDetails />
-      <Invoice />
-      <List />
-      <Itens />
-    </div>
+  return (
+    <OrderProvider>
+      <RoutesApplication />
+    </OrderProvider>
   );
 }
 
