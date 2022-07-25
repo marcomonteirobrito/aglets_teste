@@ -1,4 +1,4 @@
-import React from "react";
+import styles from "../../styles/Invoice/Invoice.module.scss";
 
 const Invoice = ({ invoices }: any) => {
   console.log("invoices", invoices);
